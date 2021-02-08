@@ -1,0 +1,34 @@
+{
+  "name": "2B-HR",
+  "version": "0.2.0",
+  "manifest_version": 2,
+  "description": "",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "2B - hr"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://vpn.2bsecure.co.il/*"
+      ],
+      "js": [
+        "src/inject/inject.js", "js/jquery/jquery.min.js"
+      ]
+    }
+  ]
+}
