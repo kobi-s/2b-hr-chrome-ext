@@ -19,7 +19,6 @@ chrome.extension.sendMessage({}, function (response) {
 				$("MainContent_HoursGridView_InsNewBT").height(190);
 				$("MainContent_HoursGridView_InsNewBT").width(100);
 				$(".page").width(1200);
-
 				if(customerInpt.length) {
 					customerInpt.append($("<input/>", {type: "search",id: "customSearchCustomer",placeholder: "חיפוש לקוח",}));
 				} else {
